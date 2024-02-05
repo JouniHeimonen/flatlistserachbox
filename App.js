@@ -15,7 +15,9 @@ export default function App() {
 
   const executeSearch = (search) => {
     const searchArray = DATA.filter((item) => item.lastname.startsWith(search));
+    const searchArray2 = DATA.filter((item) => item.firstname.startsWith(search));
     setItems(searchArray);
+    setItems(searchArray2);
   }
 
 

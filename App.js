@@ -1,8 +1,9 @@
-import { StyleSheet,FlatList,SafeAreaView,} from 'react-native';
+import { StyleSheet,FlatList,SafeAreaView,Platform} from 'react-native';
 import {DATA} from './Data';
 import { useEffect, useState } from 'react';
 import Row from './components/Row'
 import Search from './components/search';
+import Constants from 'expo-constants';
 
 
 export default function App() {
@@ -43,6 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     marginTop: '10',
     alignItems: 'center',
+    marginTop: Platform.OS === 'android' ? Constants.statusBarHeight : 0
   },
   
 });
